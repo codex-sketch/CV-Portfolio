@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathias Ayuk Besong | Portfolio</title>
+
+    <style>
+         :root {
+            --bg: #f7f4ef;
+            --card: #ffffff;
+            --text: #2b2b2b;
+            --muted: #6e6e6e;
+            --accent: #2f2f2f;
+            --border: #e1dbd2;
+        }
+        
+        body {
+            margin: 0;
+            font-family: "Inter", "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 24px 80px;
+        }
+        /* NAV */
+        
+        .nav {
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            overflow-x: auto;
+        }
+        
+        .nav button {
+            background: none;
+            border: none;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 6px 0;
+            color: var(--muted);
+        }
+        
+        .nav button.active {
+            color: var(--text);
+            border-bottom: 2px solid var(--accent);
+            font-weight: 500;
+        }
+        /* SECTIONS */
+        
+        .section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+        /* CARDS */
+        
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        /* HOME */
+        
+        .home-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+        
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .button-row a {
+            display: inline-block;
+            margin: 0 7px 10px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        .button-row a:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+        }
+        /* FOOTER */
+        
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <div class="nav">
+            <button class="active" onclick="showSection('home', this)">Home</button>
+            <button onclick="showSection('about', this)">About</button>
+            <button onclick="showSection('education', this)">Education</button>
+            <button onclick="showSection('experience', this)">Experience</button>
+            <button onclick="showSection('publications', this)">Publications</button>
+            <button onclick="showSection('certifications', this)">Certifications</button>
+            <button onclick="showSection('skills', this)">Skills & Languages</button>
+        </div>
+
+        <!-- HOME -->
+        <div id="home" class="section active">
+            <div class="card">
+                <div class="home-header">
+                    <h1>Mathias Ayuk Besong</h1>
+                    <div class="subtitle">
+                        Veterinary Epidemiologist · One Health & Antimicrobial Resistance Specialist
+                    </div>
+
+                    <!-- PROFILE IMAGE -->
+                    <div style="margin: 30px 0;">
+                        <img src="neoimage/dad.jpg" alt="Mathias Ayuk Besong" style="
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid #007bff; /* Blue outline */
+        ">
+                    </div>
+
+                    <!-- SOCIAL / ACTION BUTTONS -->
+                    <div class="button-row">
+                        <a href="mailto:mathiasayuk.besong@gmail.com" class="btn-primary">Email</a>
+                        <a href="tel:+2348053337770" class="btn-outline">Call</a>
+                        <a href="https://www.linkedin.com/in/mathias-besong-b136bb55/" target="_blank" class="btn-outline">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about me -->
+        <div id="about" class="section">
+            <div class="card">
+
+                <h2 style="margin-top:0; font-weight:600;">
+                    ABOUT ME
+                </h2>
+
+                <!-- blue divider -->
+                <div style="height:3px; width:60px; background:#1e3a8a; margin:12px 0 32px;"></div>
+
+                <!-- BASIC INFO -->
+                <p style="margin:0 0 6px;">
+                    <strong>Mathias Ayuk Besong</strong>
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Passport:</strong> B02393722 &nbsp;|&nbsp;
+                    <strong>Nationality:</strong> Nigerian (Nigeria), Cameroonian
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Date of birth:</strong> 28/08/1977 &nbsp;|&nbsp;
+                    <strong>Place of birth:</strong> Okundi, Nigeria &nbsp;|&nbsp;
+                    <strong>Gender:</strong> Male
+                </p>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:28px 0;">
+
+                <!-- CONTACT INFO -->
+                <p style="margin:0 0 8px;">
+                    📞 <strong>Phone:</strong>
+                    <a href="tel:+2348053337770">(+234) 8053337770</a>
+                </p>
+
+                <p style="margin:0 0 8px;">
+                    ✉️ <strong>Email:</strong>
+                    <a href="mailto:mathiasayuk.besong@gmail.com">mathiasayuk.besong@gmail.com</a>
+                </p>
+
+                <p style="margin:0 0 8px;">
+                    🔗 <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/mathias-besong-b136bb55/" target="_blank">
+        https://www.linkedin.com/in/mathias-besong-b136bb55/
+      </a>
+                </p>
+
+                <p style="margin:0 0 8px;">
+                    📍 <strong>Work:</strong> 4th Floor, Regus Office Silverstar Tower, GE088-4296 Accra (Ghana)
+                </p>
+
+                <p style="margin:0 0 24px;">
+                    🏠 <strong>Home:</strong> Plot 22, Oyelude Layout, Aba Alfa, Ojoo, 200213 Ibadan (Nigeria)
+                </p>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:32px 0;">
+
+                <!-- PROFESSIONAL SUMMARY -->
+                <p style="margin-bottom:16px;">
+                    Highly experienced Veterinary Epidemiologist with over 10 years of experience in zoonotic disease surveillance and outbreak investigation. Trained in advanced field epidemiology with expertise in One Health and AMR control.
+                </p>
+
+                <p style="margin-bottom:16px;">
+                    Demonstrated success in leading outbreak responses for Mpox, Yellow fever, Measles, Lassa fever, Rabies, COVID-19 and Polio. Worked as Veterinary Epidemiologist on the Mpox Animal Reservoir Surveillance Project in Nigeria and as Postgraduate Research
+                    Assistant with West Africa One Health Actions for Understanding, Preventing and Mitigating Outbreaks Project, Damien Foundation Centre for Genomics and Global Health, University of Ibadan, where the One Health concept and community-based
+                    participatory research methods are applied for the prevention, mitigation, and control of Mpox, Lassa fever, Ebola and COVID-19.
+                </p>
+
+                <p>
+                    Worked as assistant director for over 4 years at the Federal Ministry of Livestock Development, enhancing my ability to work under pressure with minimal supervision. Proven ability to adapt in high-pressure environment and to help my team achieve set
+                    objectives.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- EDUCATION -->
+        <div id="education" class="section">
+            <div class="card">
+
+                <h2 style="margin-top:0; font-weight:600;">
+                    EDUCATION AND TRAINING
+                </h2>
+
+                <!-- blue divider -->
+                <div style="height:3px; width:60px; background:#1e3a8a; margin:12px 0 32px;"></div>
+
+                <!-- DEGREE 1 -->
+                <h3 style="margin-bottom:6px;">
+                    Master of Public Health Veterinary Epidemiology Practice
+                </h3>
+
+                <p style="margin:0 0 8px; color:var(--muted);">
+                    University of Ibadan
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Dates:</strong> 05/05/2017 – 28/05/2019
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>City:</strong> Ibadan &nbsp;|&nbsp;
+                    <strong>Country:</strong> Nigeria
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Website:</strong>
+                    <a href="https://pgcollege.ui.edu.ng/" target="_blank">https://pgcollege.ui.edu.ng/</a>
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Field(s) of study:</strong> Veterinary Epidemiology: Inter-disciplinary programmes and qualifications involving health and welfare
+                </p>
+
+                <p style="margin-bottom:28px;">
+                    <strong>Level in EQF:</strong> EQF level 7
+                </p>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:36px 0;">
+
+                <!-- DEGREE 2 -->
+                <h3 style="margin-bottom:6px;">
+                    Advanced Certificate in Field Epidemiology
+                </h3>
+
+                <p style="margin:0 0 8px; color:var(--muted);">
+                    Nigeria Field Epidemiology and Laboratory Training Programme
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Dates:</strong> 05/05/2017 – 05/05/2019
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>City:</strong> Abuja &nbsp;|&nbsp;
+                    <strong>Country:</strong> Nigeria
+                </p>
+
+                <p style="margin-bottom:28px;">
+                    <strong>Field(s) of study:</strong> Health and welfare: Inter-disciplinary programmes and qualifications involving health and welfare
+                </p>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:36px 0;">
+
+                <!-- DEGREE 3 -->
+                <h3 style="margin-bottom:6px;">
+                    Doctor of Veterinary Medicine
+                </h3>
+
+                <p style="margin:0 0 8px; color:var(--muted);">
+                    University of Ibadan
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Dates:</strong> 11/02/1997 – 20/09/2002
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>City:</strong> Ibadan &nbsp;|&nbsp;
+                    <strong>Country:</strong> Nigeria
+                </p>
+
+                <p style="margin:0 0 6px;">
+                    <strong>Field(s) of study:</strong> Veterinary Medicine
+                </p>
+
+                <p>
+                    <strong>Level in EQF:</strong> EQF level 6
+                </p>
+
+            </div>
+        </div>
+
+
+        <div id="experience" class="section">
+            <div class="card">
+
+                <h2 style="margin-top:0; font-weight:600;">
+                    WORK EXPERIENCE
+                </h2>
+
+                <!-- blue divider -->
+                <div style="height:3px; width:60px; background:#1e3a8a; margin:12px 0 32px;"></div>
+
+                <!-- ROLE 1 -->
+                <h3>Regional One Health Specialist – Fleming Fund West Africa</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>Mott MacDonald</strong> – Accra, Ghana
+                </p>
+                <p style="margin:0 0 16px;">
+                    <strong>Dates:</strong> 04/12/2023 – Current
+                </p>
+
+                <ul>
+                    <li>Led animal health, aquaculture and environment technical and strategic inputs on AMR across five countries (Ghana, Nigeria, Senegal, and Sierra Leone), resulting in the development of National AMR strategies and protocols aligned with
+                        the One Health framework.</li>
+                    <li>Successfully participated in the initiation and management of multi-million-dollar country and regional Fleming Fund grants, improving AMR surveillance programs by over 25% in key sectors, including animal health, aquaculture, environment
+                        and food safety.</li>
+                    <li>Conducted scoping visits and site assessment for Cameroon, facilitating the expansion of Fleming Fund support to one additional country thereby enhancing regional AMR surveillance coverage.</li>
+                    <li>Played a key role in the development of country investment strategies that secured continued funding and support from the Fleming Fund, contributing to improved national capacity for AMR management.</li>
+                    <li>Led partnerships with major global stakeholders (FAO, WHO, MSH, FMX, ASLM, ASM, LSHTM), resulting in enhanced cross-sectoral collaboration and improved grant implementation.</li>
+                    <li>Provided technical and strategic support to four countries, enabling the successful implementation of Fleming Fund grants, leading to measurable improvements in microbiology laboratory capacities.</li>
+                    <li>Oversaw microbiology laboratory capacity-building initiatives, contributing to a 40% improvement in diagnostic capabilities for AMR surveillance.</li>
+                    <li>Recommended high-impact grant applications, ensuring a 100% approval rate for initiatives targeting AMR, One Health, gender and equity, and clinical/practitioner engagement.</li>
+                </ul>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:40px 0;">
+
+                <!-- ROLE 2 -->
+                <h3>Principal Veterinary / Epidemiology Officer</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>Federal Ministry of Livestock Development</strong> – Abuja, Nigeria
+                </p>
+                <p style="margin:0 0 16px;">
+                    <strong>Dates:</strong> 26/05/2010 – 03/12/2023
+                </p>
+
+                <ul>
+                    <li>Facilitated the collection and submission of animal health surveillance data from 31 LGAs, ensuring analysis and feedback for action.</li>
+                    <li>Supported outbreak preparedness and response for priority diseases including HPAI, rabies, ASF, PPR and anthrax.</li>
+                    <li>Collaborated with Ministry of Health and partners in zoonotic disease outbreak investigations, promoting the One Health approach.</li>
+                    <li>Led institutionalization of control measures and risk communication strategies, reducing spread of zoonotic diseases.</li>
+                    <li>Served as site coordinator for the WHO Tricycle Project animal health component in Osun State.</li>
+                    <li>Developed and delivered IPC training programs, improving compliance by 40% using Mpox and Yellow Fever case studies.</li>
+                    <li>Built capacity of 21 district officers, improving outbreak response efficiency by 15%.</li>
+                </ul>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:40px 0;">
+
+                <!-- ROLE 3 -->
+                <h3>Polio Specialist Consultant</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>Solina Center for International Development and Research (SCIDaR)</strong> – Abuja, Nigeria
+                </p>
+
+                <ul>
+                    <li>Provided technical support for polio outbreak response microplans and budgets ensuring 100% campaign readiness.</li>
+                    <li>Resolved logistical bottlenecks using data-driven dashboard analysis, reducing delays by 15%.</li>
+                    <li>Improved campaign coverage by 25% through real-time monitoring.</li>
+                    <li>Contributed to interruption of cVPV2 transmission through coordinated partner efforts.</li>
+                    <li>Developed post-campaign reports for advocacy and stakeholder engagement.</li>
+                </ul>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:40px 0;">
+
+                <!-- ROLE 4 -->
+                <h3>Epidemiologist / Mentor – I-NFETP</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>Nigeria Centre for Disease Control (NCDC)</strong> – Abuja, Nigeria
+                </p>
+                <p style="margin:0 0 16px;">
+                    <strong>Dates:</strong> 15/08/2023 – 20/07/2024
+                </p>
+
+                <ul>
+                    <li>Mentored two trainees resulting in a 30% improvement in outbreak investigation and surveillance skills.</li>
+                    <li>Guided five outbreak investigations influencing disease mitigation across multiple states.</li>
+                    <li>Enhanced curriculum with real-time case studies improving field readiness.</li>
+                    <li>Improved trainee data analysis and presentation quality by 40%.</li>
+                </ul>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:40px 0;">
+
+                <!-- ROLE 5 -->
+                <h3>Veterinary Epidemiologist – Nigeria Mpox Reservoir Project</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>National Veterinary Research Institute</strong> – Jos, Nigeria
+                </p>
+                <p style="margin:0 0 16px;">
+                    <strong>Dates:</strong> 03/2021 – 11/2022
+                </p>
+
+                <ul>
+                    <li>Participated in rodent capture across urban, peri-urban and forest reserve areas.</li>
+                    <li>Collected blood and tissue samples with epidemiological and GPS data.</li>
+                </ul>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin:40px 0;">
+
+                <!-- ROLE 6 -->
+                <h3>Postgraduate Research Assistant</h3>
+                <p style="margin:0 0 6px; color:var(--muted);">
+                    <strong>Damien Foundation Centre for Genomics and Global Health, University of Ibadan</strong> – Ibadan, Nigeria
+                </p>
+                <p style="margin:0 0 16px;">
+                    <strong>Dates:</strong> 15/06/2022 – 31/05/2023
+                </p>
+
+                <ul>
+                    <li>Applied One Health and community participatory research methods to strengthen integrated surveillance.</li>
+                    <li>Improved disease reporting to IDSR by over 20%.</li>
+                    <li>Led One Health medical outreach identifying two asymptomatic Mpox cases.</li>
+                    <li>Wrote and edited technical papers resulting in three publications.</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS -->
+        <div id="publications" class="section">
+            <div class="card">
+                <!-- PASTE PUBLICATIONS SECTION HERE WORD FOR WORD -->
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div id="certifications" class="section">
+            <div class="card">
+                <!-- PASTE CERTIFICATIONS SECTION HERE WORD FOR WORD -->
+            </div>
+        </div>
+
+        <!-- SKILLS & LANGUAGES -->
+        <div id="skills" class="section">
+            <div class="card">
+                <!-- PASTE SKILLS + LANGUAGE SKILLS HERE WORD FOR WORD -->
+            </div>
+        </div>
+
+        <footer>
+            © Mathias Ayuk Besong · One Health · Epidemiology · AMR
+        </footer>
+
+    </div>
+
+    <script>
+        function showSection(id, btn) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
